@@ -8,7 +8,9 @@ const Bottle = ({ bottle, handleAddToCart }) => {
       <h3>{name} </h3>
       <img src={img} alt={`image of ${name}`} />
       <p>Price: $ {price} </p>
-      <button onClick={() => handleAddToCart(bottle)}>Purchase</button>
+      <button className="purchase-btn" onClick={() => handleAddToCart(bottle)}>
+        Purchase
+      </button>
     </div>
   );
 };
