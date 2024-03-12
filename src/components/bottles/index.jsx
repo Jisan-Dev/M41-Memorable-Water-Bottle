@@ -5,6 +5,7 @@ import './bottles.css';
 
 const Bottles = () => {
   const [bottles, setBottles] = useState([]);
+  const [cart, setCart] = useState([]);
 
   useEffect(() => {
     fetch('https://raw.githubusercontent.com/ProgrammingHero1/memorable-water-bottle/main/public/bottles.json')
@@ -12,12 +13,17 @@ const Bottles = () => {
       .then((data) => setBottles(data));
   }, []);
 
+  const handleAddToCart = (bottle) => {
+    setCart([...cart, bottle]);
+  };
+
   return (
     <div>
       <h2>Available Bottles: {bottles.length} </h2>
+      <button style={{ marginBottom: '15px' }}>Cart: {cart.length}</button>
       <div className="bottle-container">
         {bottles.map((bottle) => (
-          <Bottle key={bottle.id} bottle={bottle} />
+          <Bottle key={bottle.id} bottle={bottle} handleAddToCart={handleAddToCart} />
         ))}
       </div>
     </div>
