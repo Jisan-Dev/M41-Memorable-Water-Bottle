@@ -12,4 +12,4 @@ const addToLocalStorage = (id) => {
   localStorage.setItem('cart', JSON.stringify(cart));
 };
 
-export { addToLocalStorage };
+export { addToLocalStorage, getStoredCart };
