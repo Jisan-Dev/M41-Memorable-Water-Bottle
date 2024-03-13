@@ -1,0 +1,8 @@
+.cart__img-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin: 0 auto 12px;
+  max-width: 1024px;
+}
