@@ -6,3 +6,8 @@
   margin: 0 auto 12px;
   max-width: 1024px;
 }
+.cart-container .item {
+  border: 1px solid yellowgreen;
+  border-radius: 8px;
+  padding: 4px;
+}
