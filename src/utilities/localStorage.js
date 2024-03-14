@@ -12,4 +12,11 @@ const addToLocalStorage = (id) => {
   localStorage.setItem('cart', JSON.stringify(cart));
 };
 
-export { addToLocalStorage, getStoredCart };
+const removeFromLocalStorage = (id) => {
+  const cart = getStoredCart();
+  const indexToBeRemoved = cart.indexOf(id);
+  cart.splice(indexToBeRemoved, 1);
+  localStorage.setItem('cart', JSON.stringify(cart));
+};
+
+export { addToLocalStorage, getStoredCart, removeFromLocalStorage };
