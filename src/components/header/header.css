@@ -1,0 +1,36 @@
+.nav-ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  justify-content: end;
+}
+
+.nav-icon {
+  font-size: 1.5rem;
+  color: white;
+  position: absolute;
+  right: 0;
+  margin-right: 20px;
+  cursor: pointer;
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .nav-ul {
+    padding: 20px;
+    flex-direction: column;
+    background-color: yellowgreen;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 20px;
+    border-radius: 16px;
+    transition: all 0.5s ease-in;
+  }
+
+  .nav-icon {
+    margin-top: 10px;
+    display: block;
+  }
+}
